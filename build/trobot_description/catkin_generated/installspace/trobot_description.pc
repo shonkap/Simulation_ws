@@ -1,0 +1,8 @@
+prefix=/home/gfr/simulation_ws/install
+
+Name: trobot_description
+Description: Description of trobot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,97 @@
+sudo apt-get install ros-melodic-xacro
+
+"chmod +x file" make executable
+
+#################################
+####**Ros Commands         **####
+#################################
+
+"rostopic list" shows list of all running topics
+"roslaunch package launchfile" runs a launch file
+"rosparam set varname value" set ros parameter value
+"rosservice list" show list of all services
+"rosservice call service value" to call service with value(set value?)
+
+
+#################################
+####switch catkin ws         ####
+#################################
+
+cd to other ws then -> "source devel/setup.bash"
+
+#################################
+####roslaunch                ####
+#################################
+
+roslaunch package(in src folder) launch(file)
+
+#################################
+####install ros gazebo       ####
+#################################
+
+sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control
+###joint state publisher
+sudo apt install ros-melodic-joint-state-publisher-gui
+
+##robot state publisher
+sudo apt install ros-melodic-robot-state-publisher
+
+sudo apt-get install ros-melodic-teleop-twist-keyboard
+run with -> "rosrun teleop_twist_keyboard teleop_twist_keyboard.py"
+
+
+**********************************************
+********GFR Notes*****************************
+**********************************************
+
+#############################
+####Source the enviroment####
+#############################
+
+cd ~catkin_ws
+source devel/setup.bash
+roscd beginner_tutorials
+
+#############################
+####Catkin Build Special ####
+#############################
+
+catkin build -sc -j2
+
+#############################
+####ROS Commands         ####
+#############################
+
+rostopic echo [topic] 			# Data shown on a published topic
+rossrv [what your want] [service]	# shows service files and what not
+rostopic list -v 			#lists all the published and subscribed topics
+
+roslaunch package launchfile		#launch using the launch file
+
+#############################
+####Git stuff            ####
+#############################
+
+!!!need a ssh key for this...!!!
+to clone recursive
+git clone <url> --recursive
+
+!!!this is useless!!!
+personal access token->
+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
+
+
+#############################
+####CMake install        ####
+#############################
+
+wget https://github.com/Kitware/CMake/releases/download/v3.20.2/cmake-3.20.2.tar.gz
+tar -zxvf cmake-3.20.2.tar.gz
+cd cmake-3.20.2/
+./bootstrap --prefix=$HOME/cmake-install
+make
+make install
+export PATH=$HOME/cmake-3.20.2/bin:$PATH
+export CMAKE_PREFIX_PATH=$HOME/cmake-3.20.2:$CMAKE_PREFIX_PATH
+
+

@@ -1,0 +1,8 @@
+prefix=/home/gfr/simulation_ws/devel
+
+Name: trobot_gazebo
+Description: Description of trobot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

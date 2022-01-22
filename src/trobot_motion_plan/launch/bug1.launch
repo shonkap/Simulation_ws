@@ -1,0 +1,15 @@
+<launch>
+	<arg name="initial_x" default="0"/>
+	<arg name="initial_y" default="0"/>
+	<arg name="des_x" default="1"/>
+	<arg name="des_y" default="8"/>
+
+	<param name="initial_x" value="$(arg initial_x)"/>
+	<param name="initial_y" value="$(arg initial_y)"/>
+	<param name="des_pos_x" value="$(arg des_x)"/>
+	<param name="des_pos_y" value="$(arg des_y)"/>
+
+	<node pkg="trobot_motion_plan" type="follow_wall.py" name="wall_follower"/>
+	<node pkg="trobot_motion_plan" type="go_to_point.py" name="got_to_point"/>
+	<node pkg="trobot_motion_plan" type="bug1.py" name="bug1" output="screen"/>
+</launch>
