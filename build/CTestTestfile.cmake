@@ -7,4 +7,5 @@
 subdirs("gtest")
 subdirs("trobot_description")
 subdirs("trobot_gazebo")
+subdirs("rplidar_ros")
 subdirs("trobot_motion_plan")
