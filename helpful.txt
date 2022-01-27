@@ -39,6 +39,16 @@ sudo apt install ros-melodic-robot-state-publisher
 sudo apt-get install ros-melodic-teleop-twist-keyboard
 run with -> "rosrun teleop_twist_keyboard teleop_twist_keyboard.py"
 
+sudo apt-get install ros-melodic-slam-gmapping
+
+#################################
+####Tutorial Links           ####
+#################################
+
+https://www.theconstructsim.com/exploring-ros-with-a-2-wheeled-robot-13-gmapping/
+
+
+
 
 **********************************************
 ********GFR Notes*****************************
