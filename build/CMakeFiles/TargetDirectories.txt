@@ -50,6 +50,13 @@
 /home/gfr/simulation_ws/build/trobot_gazebo/CMakeFiles/install/local.dir
 /home/gfr/simulation_ws/build/trobot_gazebo/CMakeFiles/rebuild_cache.dir
 /home/gfr/simulation_ws/build/trobot_gazebo/CMakeFiles/install.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/install/strip.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/edit_cache.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/list_install_components.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/test.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/install/local.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/rebuild_cache.dir
+/home/gfr/simulation_ws/build/controllers/CMakeFiles/install.dir
 /home/gfr/simulation_ws/build/rplidar_ros/CMakeFiles/install/strip.dir
 /home/gfr/simulation_ws/build/rplidar_ros/CMakeFiles/install/local.dir
 /home/gfr/simulation_ws/build/rplidar_ros/CMakeFiles/rplidarNodeClient.dir

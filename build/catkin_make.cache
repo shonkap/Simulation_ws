@@ -1,2 +1,2 @@
-rplidar_ros:trobot_description:trobot_gazebo:trobot_motion_plan
+controllers:rplidar_ros:trobot_description:trobot_gazebo:trobot_motion_plan
 -DCATKIN_DEVEL_PREFIX=/home/gfr/simulation_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gfr/simulation_ws/install -G Unix Makefiles

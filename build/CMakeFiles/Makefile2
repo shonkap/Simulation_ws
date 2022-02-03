@@ -473,6 +473,24 @@ trobot_gazebo/preinstall:
 .PHONY : trobot_gazebo/preinstall
 
 #=============================================================================
+# Directory level rules for directory controllers
+
+# Convenience name for "all" pass in the directory.
+controllers/all:
+
+.PHONY : controllers/all
+
+# Convenience name for "clean" pass in the directory.
+controllers/clean:
+
+.PHONY : controllers/clean
+
+# Convenience name for "preinstall" pass in the directory.
+controllers/preinstall:
+
+.PHONY : controllers/preinstall
+
+#=============================================================================
 # Directory level rules for directory rplidar_ros
 
 # Convenience name for "all" pass in the directory.
