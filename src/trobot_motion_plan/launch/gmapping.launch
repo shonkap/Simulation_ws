@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
 <launch>
+	<param name="robot_description" command="xacro '$(find trobot_description)/urdf/trobot.xacro'"/>
+
 	<arg name="scan_topic" default="/trobot/laser/scan" />
 	<arg name="base_frame" default="link_chassis"/>
 	<arg name="odom_frame" default="odom"/>
 
+	<!-- send fake joint values -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+	        <param name="use_gui" value="False"/>
+	</node>
+
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
-	<node pkg="rviz" type="rviz" name="rviz"/>
+
+	<!-- Show in Rviz   -->
+  	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find trobot_description)/rviz/trobot_rviz_config_2.rviz"/>
 
 	<node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
 		<param name="base_frame" value="$(arg base_frame)"/>

@@ -80,29 +80,29 @@ def moveToGoal():
 	#angle to goal from robot orientation
         #print('new goal: ', goal.x, ' ', goal.y, ' yaw ', yaw, ' goal', angle_to_goal)
         if abs(angle_to_goal - yaw) < 0.3:
-		print('straight')
+		#print('straight')
 		slinz = 0.0
 	elif (angle_to_goal >= 0.0 and yaw >= 0.0) or (angle_to_goal <= 0.0 and yaw <= 0.0):
 	    if (angle_to_goal > yaw):
-		print("left s")
+		#print("left s")
                 slinz = rposr
 	    else:
-                print("right s")
+                #print("right s")
 		slinz = rposl
 	elif (angle_to_goal >= 0.0 and yaw <= 0.0) or (angle_to_goal <= 0.0 and yaw >= 0.0):
 	    if yaw < 0:
                 if(3.14 + yaw + 3.14 - angle_to_goal) > (angle_to_goal - yaw): 
-		    print("right dl")
+		    #print("right dl")
 		    slinz = rposr
 		else:
-	            print("left dl")
+	            #print("left dl")
 		    slinz = rposl
 	    else:
                 if(3.14 + angle_to_goal + 3.14 - yaw) > (yaw - angle_to_goal): 
-		    print("left dg")
+		    #print("left dg")
 		    slinz = rposl
 		else:
-		    print("right dg")
+		    #print("right dg")
 		    slinz = rposr
 
         speed.angular.z = slinz
