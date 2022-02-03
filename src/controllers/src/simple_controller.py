@@ -26,12 +26,6 @@ speed = None
 pub = None
 
 def newGoal(msg):
-    #global speed
-    #global pub
-    #global x
-    #global y
-    #global yaw
-    global robpos
     global goal
     global goal_met
 
@@ -39,90 +33,6 @@ def newGoal(msg):
     goal.x = msg.pose.position.x
     goal.y = msg.pose.position.y
     return
-
-    rposl = 3
-    rposr = -3
-
-    slinx = 0.0
-    slinz = 0.0
-
-    r = rospy.Rate(10)
-    goaln = Point()
-    goaln.x = msg.pose.position.x
-    goaln.y = msg.pose.position.y
-    
-    print('new goal: ', goaln.x, ' ', goaln.y)
-
-    while not rospy.is_shutdown():
-        inc_x = goaln.x -robpos.x
-        inc_y = goaln.y -robpos.y
-
-        speed.linear.x = slinx
-        speed.angular.z = slinz
-
-	slinx_old = slinx
-    	slinz_old = slinz
-
-        
-        angle_to_goal = math.atan2(inc_y, inc_x)
-        dist_to_goal = math.sqrt(((goaln.x - robpos.x) ** 2) + ((goaln.y - robpos.y) ** 2))
-
-	#angle to goal from robot orientation
-        if abs(angle_to_goal - yaw) < 0.3:
-		print('straight')
-		slinz = 0.0
-	elif (angle_to_goal >= 0.0 and yaw >= 0.0) or (angle_to_goal <= 0.0 and yaw <= 0.0):
-	    if (angle_to_goal > yaw):
-		print("left s")
-                slinz = rposr
-	    else:
-                print("right s")
-		slinz = rposl
-	elif (angle_to_goal >= 0.0 and yaw <= 0.0) or (angle_to_goal <= 0.0 and yaw >= 0.0):
-	    if yaw < 0:
-                if(3.14 + yaw + 3.14 - angle_to_goal) > (angle_to_goal - yaw): 
-		    print("right dl")
-		    slinz = rposr
-		else:
-	            print("left dl")
-		    slinz = rposl
-	    else:
-                if(3.14 + angle_to_goal + 3.14 - yaw) > (yaw - angle_to_goal): 
-		    print("left dg")
-		    slinz = rposl
-		else:
-		    print("right dg")
-		    slinz = rposr
-
-        #print('to goal: ', angle_to_goal, ' angle ', yaw)
-
-
-        #if abs(angle_to_goal - yaw) > 0.3:
- 	#    if (angle_to_goal) < 0:
-        #        slinz = -.4
-        #        speed.angular.z = slinz
-        #    else:
-        #        slinz = .4
-        #        speed.angular.z = slinz      
-        #else:
-        #    slinz = 0.0
-        speed.angular.z = slinz
-
-
-        if abs(angle_to_goal - yaw) > 1:
-	    slinx = 0.1
-            speed.linear.x = slinx
-        if dist_to_goal > .1:
-            slinx = 1
-            speed.linear.x = slinx
-        else:
-            speed.linear.x = 0.0
-            speed.angular.z = 0.0
-            pub.publish(speed)
-            return
-
-        pub.publish(speed)
-        r.sleep()
 
 def newOdom(msg):
     global robpos
