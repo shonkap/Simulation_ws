@@ -62,7 +62,11 @@ rosrun map_server map_server src/TrajectoryPlanner/maps/testmapp.yaml
 
 https://www.theconstructsim.com/exploring-ros-with-a-2-wheeled-robot-13-gmapping/
 
+### other files:
 
+https://github.com/Slamtec/rplidar_sdk
+
+https://github.com/LetsPlayNow/TrajectoryPlanner
 
 
 **********************************************
