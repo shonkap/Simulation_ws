@@ -41,6 +41,21 @@ run with -> "rosrun teleop_twist_keyboard teleop_twist_keyboard.py"
 
 sudo apt-get install ros-melodic-slam-gmapping
 
+sudo apt-get install ros-melodic-map-server
+
+sudo apt install ros-melodic-amcl
+
+#################################
+####Map stuff...             ####
+#################################
+
+##slam_gmapping to create map
+rosrun map_server map_saver -f src/TrajectoryPlanner/maps/testmapp
+
+##amcl to get map
+rosrun map_server map_server src/TrajectoryPlanner/maps/testmapp.yaml
+
+
 #################################
 ####Tutorial Links           ####
 #################################

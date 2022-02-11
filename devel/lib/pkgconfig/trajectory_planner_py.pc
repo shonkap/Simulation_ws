@@ -1,0 +1,8 @@
+prefix=/home/gfr/simulation_ws/devel
+
+Name: trajectory_planner_py
+Description: Description of trajectory_planner_py
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

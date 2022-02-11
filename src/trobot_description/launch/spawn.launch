@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+	<include file="$(find trobot_gazebo)/launch/worldlaunch.launch" />
+
 	<param name="robot_description" command="xacro '$(find trobot_description)/urdf/trobot.xacro'"/>
 		
 	<arg name="x" default="0"/>

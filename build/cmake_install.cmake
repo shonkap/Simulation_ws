@@ -135,6 +135,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gfr/simulation_ws/build/trobot_gazebo/cmake_install.cmake")
   include("/home/gfr/simulation_ws/build/controllers/cmake_install.cmake")
   include("/home/gfr/simulation_ws/build/rplidar_ros/cmake_install.cmake")
+  include("/home/gfr/simulation_ws/build/TrajectoryPlanner/cmake_install.cmake")
   include("/home/gfr/simulation_ws/build/trobot_motion_plan/cmake_install.cmake")
 
 endif()

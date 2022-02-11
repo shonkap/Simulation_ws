@@ -109,10 +109,10 @@ def moveToGoal():
 
         #move in straight line to goal
         if abs(angle_to_goal - yaw) > 1:
-	    slinx = 0.1
+	    slinx = 0.05
             speed.linear.x = slinx
         if dist_to_goal > .1:
-            slinx = 1
+            slinx = .3
             speed.linear.x = slinx
         else:
             speed.linear.x = 0.0

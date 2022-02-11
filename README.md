@@ -1,10 +1,10 @@
 # Simulation_ws
 
 ### Start Simulation 1
-- trobot_gazebo worldlaunch.launch
+- ### called by spawn: trobot_gazebo worldlaunch.launch
 - trobot_description spawn.launch
 - ### need to make these one!
-- trobot_description rviz.launch
+- ### called by other launch files: trobot_description rviz.launch
 
 ### Gmapping Simulation
 - ### start sim
@@ -14,3 +14,5 @@
 ### Move to point contoroller
 - controllers simple_C.launch 
 - ### This launches rviz and the waypoint controller
+
+### Fire up lidar sensor for ros
